@@ -1,0 +1,2 @@
+rootProject.name='SchibstedTask'
+include ':app'

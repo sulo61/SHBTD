@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navAuth"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.bitbay.pay.bitcoin.pos.terminal.ui.auth.splash.SplashFragment">
+
+        <action
+            android:id="@+id/action_splashFragment_to_preLoginFragment"
+            app:destination="@id/preLoginFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/preLoginFragment"
+        android:name="com.bitbay.pay.bitcoin.pos.terminal.ui.auth.prelogin.PreLoginFragment">
+
+        <action
+            android:id="@+id/action_preLoginFragment_to_howToFragment"
+            app:destination="@id/howToFragment" />
+
+        <action
+            android:id="@+id/action_preLoginFragment_to_qrScannerFragment"
+            app:destination="@id/qrScannerFragment" />
+
+        <action
+            android:id="@+id/action_preLoginFragment_to_termsFragment"
+            app:destination="@id/termsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/howToFragment"
+        android:name="com.bitbay.pay.bitcoin.pos.terminal.ui.auth.howto.HowToFragment">
+
+        <action
+            android:id="@+id/action_howToFragment_to_qrScannerFragment"
+            app:destination="@id/qrScannerFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/qrScannerFragment"
+        android:name="com.bitbay.pay.bitcoin.pos.terminal.ui.auth.qrscanner.QrScannerFragment" />
+
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.bitbay.pay.bitcoin.pos.terminal.ui.auth.terms.TermsFragment" />
+
+</navigation>
